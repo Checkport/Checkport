@@ -6,3 +6,7 @@ An app for repeatable, sharable checklists
 - `infrastructure/`
 - `frontend/`
 - `backend/`
+
+## Infrastructure
+
+![](./Infrastructure.drawio.png)
