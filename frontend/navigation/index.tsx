@@ -14,9 +14,8 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
-import TabThreeScreen from '../screens/TabThreeScreen';
+import TabChecklists from '../screens/TabChecklists';
+import TabDiscover from '../screens/TabDiscover';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -59,21 +58,21 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="TabChecklists"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
       <BottomTab.Screen
-        name="TabOne"
-        component={TabOneScreen}
-        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
+        name="TabChecklists"
+        component={TabChecklists}
+        options={{
           title: 'Checklists',
           tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />
-        })}
+        }}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoScreen}
+        name="TabDiscover"
+        component={TabDiscover}
         options={{
           title: 'Discover',
           tabBarIcon: ({ color }) => <TabBarIcon name="search" color={color} />,
